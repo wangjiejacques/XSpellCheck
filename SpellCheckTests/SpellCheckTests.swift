@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SpellCheck
+//@testable import SpellCheckImpl
 
 class SpellCheckTests: XCTestCase {
     
@@ -20,17 +20,30 @@ class SpellCheckTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testMisspelled() {
+        let sentence = "func hello worl method() -> completioin {"
+        let ranges = sentence.misspelled
+        XCTAssertEqual(ranges.count, 2)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+
+}
+extension String {
+
+    var misspelled: [NSRange] {
+        var ranges = [NSRange]()
+        var range = NSRange()
+        while true {
+            range = NSSpellChecker.shared.checkSpelling(of: self, startingAt: range.upperBound)
+            if range.length == 0 {
+                break
+            }
+            if ranges.contains(range) {
+                break
+            }
+            ranges.append(range)
         }
+        return ranges
     }
-    
+
 }

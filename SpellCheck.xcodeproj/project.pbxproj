@@ -11,6 +11,11 @@
 		A0B2E7072034D75700FACAB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B2E7062034D75700FACAB8 /* Assets.xcassets */; };
 		A0B2E70A2034D75700FACAB8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B2E7082034D75700FACAB8 /* MainMenu.xib */; };
 		A0B2E7162034D75700FACAB8 /* SpellCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E7152034D75700FACAB8 /* SpellCheckTests.swift */; };
+		A0B2E7272034D78A00FACAB8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B2E7262034D78A00FACAB8 /* Cocoa.framework */; };
+		A0B2E72A2034D78A00FACAB8 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E7292034D78A00FACAB8 /* SourceEditorExtension.swift */; };
+		A0B2E72C2034D78A00FACAB8 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E72B2034D78A00FACAB8 /* SourceEditorCommand.swift */; };
+		A0B2E7312034D78A00FACAB8 /* SpellCheckImpl.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0B2E74A2034E56C00FACAB8 /* String+misspell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E7492034E56C00FACAB8 /* String+misspell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,7 +26,28 @@
 			remoteGlobalIDString = A0B2E7002034D75700FACAB8;
 			remoteInfo = SpellCheck;
 		};
+		A0B2E72F2034D78A00FACAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0B2E6F92034D75700FACAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0B2E7232034D78A00FACAB8;
+			remoteInfo = SpellCheckImpl;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0B2E7352034D78A00FACAB8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A0B2E7312034D78A00FACAB8 /* SpellCheckImpl.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A0B2E7012034D75700FACAB8 /* SpellCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +59,13 @@
 		A0B2E7112034D75700FACAB8 /* SpellCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B2E7152034D75700FACAB8 /* SpellCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckTests.swift; sourceTree = "<group>"; };
 		A0B2E7172034D75700FACAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpellCheckImpl.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B2E7262034D78A00FACAB8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A0B2E7292034D78A00FACAB8 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		A0B2E72B2034D78A00FACAB8 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		A0B2E72D2034D78A00FACAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0B2E72E2034D78A00FACAB8 /* SpellCheckImpl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpellCheckImpl.entitlements; sourceTree = "<group>"; };
+		A0B2E7492034E56C00FACAB8 /* String+misspell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+misspell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0B2E7212034D78A00FACAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B2E7272034D78A00FACAB8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +99,8 @@
 			children = (
 				A0B2E7032034D75700FACAB8 /* SpellCheck */,
 				A0B2E7142034D75700FACAB8 /* SpellCheckTests */,
+				A0B2E7282034D78A00FACAB8 /* SpellCheckImpl */,
+				A0B2E7252034D78A00FACAB8 /* Frameworks */,
 				A0B2E7022034D75700FACAB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +110,7 @@
 			children = (
 				A0B2E7012034D75700FACAB8 /* SpellCheck.app */,
 				A0B2E7112034D75700FACAB8 /* SpellCheckTests.xctest */,
+				A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +136,26 @@
 			path = SpellCheckTests;
 			sourceTree = "<group>";
 		};
+		A0B2E7252034D78A00FACAB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2E7262034D78A00FACAB8 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0B2E7282034D78A00FACAB8 /* SpellCheckImpl */ = {
+			isa = PBXGroup;
+			children = (
+				A0B2E7492034E56C00FACAB8 /* String+misspell.swift */,
+				A0B2E7292034D78A00FACAB8 /* SourceEditorExtension.swift */,
+				A0B2E72B2034D78A00FACAB8 /* SourceEditorCommand.swift */,
+				A0B2E72D2034D78A00FACAB8 /* Info.plist */,
+				A0B2E72E2034D78A00FACAB8 /* SpellCheckImpl.entitlements */,
+			);
+			path = SpellCheckImpl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,10 +166,12 @@
 				A0B2E6FD2034D75700FACAB8 /* Sources */,
 				A0B2E6FE2034D75700FACAB8 /* Frameworks */,
 				A0B2E6FF2034D75700FACAB8 /* Resources */,
+				A0B2E7352034D78A00FACAB8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A0B2E7302034D78A00FACAB8 /* PBXTargetDependency */,
 			);
 			name = SpellCheck;
 			productName = SpellCheck;
@@ -130,6 +196,23 @@
 			productReference = A0B2E7112034D75700FACAB8 /* SpellCheckTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A0B2E7232034D78A00FACAB8 /* SpellCheckImpl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0B2E7322034D78A00FACAB8 /* Build configuration list for PBXNativeTarget "SpellCheckImpl" */;
+			buildPhases = (
+				A0B2E7202034D78A00FACAB8 /* Sources */,
+				A0B2E7212034D78A00FACAB8 /* Frameworks */,
+				A0B2E7222034D78A00FACAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpellCheckImpl;
+			productName = SpellCheckImpl;
+			productReference = A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,12 +225,16 @@
 				TargetAttributes = {
 					A0B2E7002034D75700FACAB8 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A0B2E7102034D75700FACAB8 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = A0B2E7002034D75700FACAB8;
+					};
+					A0B2E7232034D78A00FACAB8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -166,6 +253,7 @@
 			targets = (
 				A0B2E7002034D75700FACAB8 /* SpellCheck */,
 				A0B2E7102034D75700FACAB8 /* SpellCheckTests */,
+				A0B2E7232034D78A00FACAB8 /* SpellCheckImpl */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +269,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A0B2E70F2034D75700FACAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0B2E7222034D78A00FACAB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +301,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0B2E7202034D78A00FACAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B2E74A2034E56C00FACAB8 /* String+misspell.swift in Sources */,
+				A0B2E72A2034D78A00FACAB8 /* SourceEditorExtension.swift in Sources */,
+				A0B2E72C2034D78A00FACAB8 /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,6 +318,11 @@
 			isa = PBXTargetDependency;
 			target = A0B2E7002034D75700FACAB8 /* SpellCheck */;
 			targetProxy = A0B2E7122034D75700FACAB8 /* PBXContainerItemProxy */;
+		};
+		A0B2E7302034D78A00FACAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0B2E7232034D78A00FACAB8 /* SpellCheckImpl */;
+			targetProxy = A0B2E72F2034D78A00FACAB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -337,15 +447,18 @@
 		A0B2E71B2034D75700FACAB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SpellCheck/SpellCheck.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5C59L2E3AR;
 				INFOPLIST_FILE = SpellCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -353,15 +466,18 @@
 		A0B2E71C2034D75700FACAB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SpellCheck/SpellCheck.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5C59L2E3AR;
 				INFOPLIST_FILE = SpellCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -371,13 +487,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5C59L2E3AR;
 				INFOPLIST_FILE = SpellCheckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheckTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellCheck.app/Contents/MacOS/SpellCheck";
 			};
@@ -388,15 +506,52 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5C59L2E3AR;
 				INFOPLIST_FILE = SpellCheckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheckTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellCheck.app/Contents/MacOS/SpellCheck";
+			};
+			name = Release;
+		};
+		A0B2E7332034D78A00FACAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpellCheckImpl/SpellCheckImpl.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5C59L2E3AR;
+				INFOPLIST_FILE = SpellCheckImpl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck.SpellCheckImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A0B2E7342034D78A00FACAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpellCheckImpl/SpellCheckImpl.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5C59L2E3AR;
+				INFOPLIST_FILE = SpellCheckImpl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck.SpellCheckImpl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -426,6 +581,15 @@
 			buildConfigurations = (
 				A0B2E71E2034D75700FACAB8 /* Debug */,
 				A0B2E71F2034D75700FACAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0B2E7322034D78A00FACAB8 /* Build configuration list for PBXNativeTarget "SpellCheckImpl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0B2E7332034D78A00FACAB8 /* Debug */,
+				A0B2E7342034D78A00FACAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
