@@ -15,11 +15,8 @@ extension String {
         var ranges = [NSRange]()
         var range = NSRange()
         while true {
-            range = NSSpellChecker.shared.checkSpelling(of: self, startingAt: range.upperBound)
+            range = NSSpellChecker.shared.checkSpelling(of: self, startingAt: range.upperBound, language: "en_US", wrap: false, inSpellDocumentWithTag: 0, wordCount: nil)
             if range.length == 0 {
-                break
-            }
-            if ranges.contains(range) {
                 break
             }
             ranges.append(range)
