@@ -10,6 +10,8 @@ import Foundation
 import XcodeKit
 import AppKit
 
+// the words below should be highlighted.
+// wrnog wodsr: spll, helol
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {

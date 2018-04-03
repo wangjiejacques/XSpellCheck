@@ -14,7 +14,7 @@
 		A0B2E7272034D78A00FACAB8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B2E7262034D78A00FACAB8 /* Cocoa.framework */; };
 		A0B2E72A2034D78A00FACAB8 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E7292034D78A00FACAB8 /* SourceEditorExtension.swift */; };
 		A0B2E72C2034D78A00FACAB8 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E72B2034D78A00FACAB8 /* SourceEditorCommand.swift */; };
-		A0B2E7312034D78A00FACAB8 /* SpellCheckImpl.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0B2E7312034D78A00FACAB8 /* XSpellCheck.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A0B2E7242034D78A00FACAB8 /* XSpellCheck.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0B2E74A2034E56C00FACAB8 /* String+misspell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B2E7492034E56C00FACAB8 /* String+misspell.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A0B2E7312034D78A00FACAB8 /* SpellCheckImpl.appex in Embed App Extensions */,
+				A0B2E7312034D78A00FACAB8 /* XSpellCheck.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,7 +59,7 @@
 		A0B2E7112034D75700FACAB8 /* SpellCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B2E7152034D75700FACAB8 /* SpellCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckTests.swift; sourceTree = "<group>"; };
 		A0B2E7172034D75700FACAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpellCheckImpl.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B2E7242034D78A00FACAB8 /* XSpellCheck.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XSpellCheck.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B2E7262034D78A00FACAB8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A0B2E7292034D78A00FACAB8 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		A0B2E72B2034D78A00FACAB8 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			children = (
 				A0B2E7012034D75700FACAB8 /* SpellCheck.app */,
 				A0B2E7112034D75700FACAB8 /* SpellCheckTests.xctest */,
-				A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */,
+				A0B2E7242034D78A00FACAB8 /* XSpellCheck.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			);
 			name = SpellCheckImpl;
 			productName = SpellCheckImpl;
-			productReference = A0B2E7242034D78A00FACAB8 /* SpellCheckImpl.appex */;
+			productReference = A0B2E7242034D78A00FACAB8 /* XSpellCheck.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -530,7 +530,7 @@
 				INFOPLIST_FILE = SpellCheckImpl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck.SpellCheckImpl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XSpellCheck;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -548,7 +548,7 @@
 				INFOPLIST_FILE = SpellCheckImpl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jwang123.SpellCheck.SpellCheckImpl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XSpellCheck;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
