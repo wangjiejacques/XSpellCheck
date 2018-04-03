@@ -1,6 +1,6 @@
 # XSpellCheck
 
-XSpellCheck is a Xcode extension for swift code spell check.
+XSpellCheck is a Xcode extension for swift code spell check, support `UpperCamelCase`, `lowerCamelCase`, `CAPITALIZED_WITH_UNDERSCORES`, `lowercase_separated_by_underscores`.
 
 ![alt tag](https://github.com/wangjiejacques/XSpellCheck/blob/master/example.gif)
 
